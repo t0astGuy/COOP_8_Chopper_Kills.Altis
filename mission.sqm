@@ -1,0 +1,625 @@
+version=12;
+class Mission
+{
+	addOns[]=
+	{
+		"A3_Characters_F_OPFOR",
+		"a3_characters_f_beta",
+		"A3_Characters_F_INDEP",
+		"A3_Air_F_Beta_Heli_Transport_01",
+		"A3_Characters_F_Civil",
+		"A3_Characters_F_BLUFOR",
+		"A3_Air_F_Heli_Light_02",
+		"A3_Air_F_Beta_Heli_Attack_01",
+		"A3_Air_F_Beta_Heli_Attack_02",
+		"A3_Armor_F_AMV",
+		"A3_Armor_F_Marid",
+		"A3_Air_F_Beta_Heli_Transport_02",
+		"A3_Boat_F_Boat_Transport_01",
+		"a3_characters_f_gamma",
+		"A3_Armor_F_Slammer",
+		"A3_Armor_F_APC_Wheeled_03",
+		"A3_Armor_F_T100K",
+		"a3_map_altis",
+		"A3_Air_F_Heli_Light_01",
+		"a3_air_f_epb_heli_light_03"
+	};
+	addOnsAuto[]=
+	{
+		"A3_Characters_F_BLUFOR",
+		"A3_Air_F_Beta_Heli_Attack_01",
+		"A3_Air_F_Heli_Light_01",
+		"A3_Air_F_Beta_Heli_Transport_01",
+		"a3_air_f_epb_heli_light_03",
+		"a3_map_altis"
+	};
+	randomSeed=11823142;
+	class Intel
+	{
+		briefingName="COOP_8_Chopper_Kills";
+		overviewText="A simple mission designed to help us get some practice in the ArmA Attack Choppers.";
+		startWeather=0.84999996;
+		startWind=0;
+		forecastWeather=1;
+		forecastWind=0;
+		forecastWaves=0;
+		rainForced=1;
+		lightningsForced=1;
+		wavesForced=1;
+		windForced=1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=5;
+		minute=15;
+		startFogDecay=0.0049333;
+		forecastFogDecay=0.0049333;
+	};
+	class Groups
+	{
+		items=5;
+		class Item0
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={14659.621,17.91,16676.174};
+					id=0;
+					side="WEST";
+					vehicle="B_Helipilot_F";
+					player="PLAYER COMMANDER";
+					leader=1;
+					rank="CAPTAIN";
+					skill=0.60000002;
+					text="UnitNATO_AH1_P";
+					init="GrpNATO_AH1 = group this; nul = [""p"",this] call f_fnc_folk_assignGear ; ";
+					description="NATO Attack Helo 1 Pilot";
+				};
+				class Item1
+				{
+					position[]={14662.094,17.91,16674.521};
+					id=1;
+					side="WEST";
+					vehicle="B_Helipilot_F";
+					player="PLAY CDG";
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					text="UnitNATO_AH1_CP";
+					init="GrpNATO_AH1 = group this; nul = [""p"",this] call f_fnc_folk_assignGear ; ";
+					description="NATO Attack Helo 1 Co-Pilot";
+				};
+			};
+		};
+		class Item1
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={14676.492,17.91,16674.248};
+					id=2;
+					side="WEST";
+					vehicle="B_Helipilot_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CAPTAIN";
+					skill=0.60000002;
+					text="UnitNATO_AH2_P";
+					init="GrpNATO_AH2 = group this; nul = [""p"",this] call f_fnc_folk_assignGear; ";
+					description="NATO Attack Helo 2 Pilot";
+				};
+				class Item1
+				{
+					position[]={14678.965,17.91,16672.596};
+					id=3;
+					side="WEST";
+					vehicle="B_Helipilot_F";
+					player="PLAY CDG";
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					text="UnitNATO_AH2_CP";
+					init="GrpNATO_AH2 = group this; nul = [""p"",this] call f_fnc_folk_assignGear ;";
+					description="NATO Attack Helo 2 Co-Pilot";
+				};
+			};
+		};
+		class Item2
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={14577.674,17.91,16662.545};
+					id=4;
+					side="LOGIC";
+					vehicle="Logic";
+					leader=1;
+					skill=0.60000002;
+					text="SERVER";
+				};
+			};
+		};
+		class Item3
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={14692.897,17.91,16684.654};
+					azimut=270;
+					id=5;
+					side="WEST";
+					vehicle="B_Helipilot_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CAPTAIN";
+					skill=0.60000002;
+					text="UnitNATO_AH3_P";
+					init="GrpNATO_AH3 = group this; nul = [""p"",this] call f_fnc_folk_assignGear; ";
+					description="NATO Attack Helo 3 Pilot";
+				};
+				class Item1
+				{
+					position[]={14692.914,17.91,16681.568};
+					azimut=275;
+					id=6;
+					side="WEST";
+					vehicle="B_Helipilot_F";
+					player="PLAY CDG";
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					text="UnitNATO_AH3_CP";
+					init="GrpNATO_AH3 = group this; nul = [""p"",this] call f_fnc_folk_assignGear ;";
+					description="NATO Attack Helo 3 Co-Pilot";
+				};
+			};
+		};
+		class Item4
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=2;
+				class Item0
+				{
+					position[]={14690.852,17.91,16696.225};
+					azimut=270;
+					id=7;
+					side="WEST";
+					vehicle="B_Helipilot_F";
+					player="PLAY CDG";
+					leader=1;
+					rank="CAPTAIN";
+					skill=0.60000002;
+					text="UnitNATO_AH4_P";
+					init="GrpNATO_AH4 = group this; nul = [""p"",this] call f_fnc_folk_assignGear; ";
+					description="NATO Attack Helo 4 Pilot";
+				};
+				class Item1
+				{
+					position[]={14690.868,17.91,16693.139};
+					azimut=275;
+					id=8;
+					side="WEST";
+					vehicle="B_Helipilot_F";
+					player="PLAY CDG";
+					rank="LIEUTENANT";
+					skill=0.60000002;
+					text="UnitNATO_AH4_CP";
+					init="GrpNATO_AH4 = group this; nul = [""p"",this] call f_fnc_folk_assignGear ;";
+					description="NATO Attack Helo 4 Co-Pilot";
+				};
+			};
+		};
+	};
+	class Vehicles
+	{
+		items=6;
+		class Item0
+		{
+			position[]={14660.711,17.91,16665.523};
+			id=9;
+			side="EMPTY";
+			vehicle="B_Heli_Attack_01_F";
+			leader=1;
+			skill=0.60000002;
+			text="VehNATO_AH1";
+		};
+		class Item1
+		{
+			position[]={14676.875,17.91,16664.525};
+			id=10;
+			side="EMPTY";
+			vehicle="B_Heli_Attack_01_F";
+			leader=1;
+			skill=0.60000002;
+			text="VehNATO_AH2";
+		};
+		class Item2
+		{
+			position[]={14699.463,17.91,16683.691};
+			azimut=270;
+			id=11;
+			side="EMPTY";
+			vehicle="B_Heli_Light_01_armed_F";
+			skill=0.60000002;
+		};
+		class Item3
+		{
+			position[]={14699.29,17.91,16695.219};
+			azimut=265;
+			id=12;
+			side="EMPTY";
+			vehicle="B_Heli_Light_01_armed_F";
+			skill=0.60000002;
+		};
+		class Item4
+		{
+			position[]={14703.74,17.91,16666.902};
+			azimut=270;
+			id=13;
+			side="EMPTY";
+			vehicle="B_Heli_Transport_01_F";
+			skill=0.60000002;
+		};
+		class Item5
+		{
+			position[]={14700.022,17.91,16708.512};
+			azimut=270;
+			id=14;
+			side="EMPTY";
+			vehicle="I_Heli_light_03_F";
+			skill=0.60000002;
+		};
+	};
+	class Markers
+	{
+		items=25;
+		class Item0
+		{
+			position[]={20788.02,36.14579,6751.3262};
+			name="marker_1";
+			markerType="ELLIPSE";
+			type="mil_objective";
+			colorName="ColorRed";
+			a=150;
+			b=130;
+		};
+		class Item1
+		{
+			position[]={20532.715,34.494446,8880.8281};
+			name="marker_2";
+			markerType="ELLIPSE";
+			type="mil_objective";
+			colorName="ColorRed";
+			a=150;
+			b=150;
+		};
+		class Item2
+		{
+			position[]={20223.992,48.668388,11687.939};
+			name="marker_3";
+			markerType="ELLIPSE";
+			type="mil_objective";
+			colorName="ColorRed";
+			a=185;
+			b=185;
+		};
+		class Item3
+		{
+			position[]={16787.18,23.273661,12672.074};
+			name="marker_4";
+			markerType="ELLIPSE";
+			type="mil_objective";
+			colorName="ColorRed";
+			a=300;
+			b=300;
+		};
+		class Item4
+		{
+			position[]={18090.502,24.22427,15228.354};
+			name="marker_5";
+			markerType="ELLIPSE";
+			type="mil_objective";
+			colorName="ColorRed";
+			a=185;
+			b=185;
+		};
+		class Item5
+		{
+			position[]={18760.08,32.885193,16639.574};
+			name="marker_6";
+			markerType="ELLIPSE";
+			type="mil_objective";
+			colorName="ColorRed";
+			a=190;
+			b=190;
+		};
+		class Item6
+		{
+			position[]={20961.783,42.316467,16963.766};
+			name="marker_7";
+			markerType="ELLIPSE";
+			type="mil_objective";
+			colorName="ColorRed";
+			a=190;
+			b=190;
+		};
+		class Item7
+		{
+			position[]={25676.674,20.276917,21345.283};
+			name="marker_8";
+			markerType="ELLIPSE";
+			type="mil_objective";
+			colorName="ColorRed";
+			a=220;
+			b=145;
+		};
+		class Item8
+		{
+			position[]={19380.295,38.278076,13253.649};
+			name="marker_9";
+			markerType="ELLIPSE";
+			type="mil_objective";
+			colorName="ColorRed";
+			a=180;
+			b=145;
+		};
+		class Item9
+		{
+			position[]={16339.692,22.611116,17219.135};
+			name="marker_10";
+			markerType="ELLIPSE";
+			type="mil_objective";
+			colorName="ColorRed";
+			a=250;
+			b=190;
+		};
+		class Item10
+		{
+			position[]={14006.221,26.2232,18695.527};
+			name="marker_11";
+			markerType="ELLIPSE";
+			type="mil_objective";
+			colorName="ColorRed";
+			a=190;
+			b=190;
+		};
+		class Item11
+		{
+			position[]={9432.0195,124.444,20274.82};
+			name="marker_12";
+			markerType="ELLIPSE";
+			type="mil_objective";
+			colorName="ColorRed";
+			a=80;
+			b=80;
+		};
+		class Item12
+		{
+			position[]={8630.2725,181.30423,18273.107};
+			name="marker_13";
+			markerType="ELLIPSE";
+			type="mil_objective";
+			colorName="ColorRed";
+			a=190;
+			b=190;
+		};
+		class Item13
+		{
+			position[]={9367.7021,119.48599,15889.776};
+			name="marker_14";
+			markerType="ELLIPSE";
+			type="mil_objective";
+			colorName="ColorRed";
+			a=300;
+			b=190;
+		};
+		class Item14
+		{
+			position[]={11196.685,182.40022,8711.5166};
+			name="marker_15";
+			markerType="ELLIPSE";
+			type="mil_objective";
+			colorName="ColorRed";
+			a=80;
+			b=80;
+		};
+		class Item15
+		{
+			position[]={9041.5039,23.687229,12010.578};
+			name="marker_16";
+			markerType="ELLIPSE";
+			type="mil_objective";
+			colorName="ColorRed";
+			a=190;
+			b=190;
+		};
+		class Item16
+		{
+			position[]={4158.6641,52.540466,11735.343};
+			name="marker_17";
+			markerType="ELLIPSE";
+			type="mil_objective";
+			colorName="ColorRed";
+			a=190;
+			b=190;
+		};
+		class Item17
+		{
+			position[]={4856.73,78.675179,16158.911};
+			name="marker_18";
+			markerType="ELLIPSE";
+			type="mil_objective";
+			colorName="ColorRed";
+			a=150;
+			b=75;
+		};
+		class Item18
+		{
+			position[]={4584.6216,299.54285,21370.955};
+			name="marker_19";
+			markerType="ELLIPSE";
+			type="mil_objective";
+			colorName="ColorRed";
+			a=80;
+			b=80;
+		};
+		class Item19
+		{
+			position[]={9700.5596,2.6472778,22289.307};
+			name="marker_20";
+			markerType="ELLIPSE";
+			type="mil_objective";
+			colorName="ColorRed";
+			a=50;
+			b=50;
+		};
+		class Item20
+		{
+			position[]={14600.108,46.635487,20778.416};
+			name="marker_21";
+			markerType="ELLIPSE";
+			type="mil_objective";
+			colorName="ColorRed";
+			a=100;
+			b=100;
+		};
+		class Item21
+		{
+			position[]={14657.411,17.91,16655.186};
+			name="deploy";
+			type="mil_flag";
+			colorName="ColorGreen";
+		};
+		class Item22
+		{
+			position[]={11734.34,12.88624,13705.495};
+			name="marker_0";
+			markerType="ELLIPSE";
+			type="mil_objective";
+			colorName="ColorRed";
+			a=100;
+			b=100;
+		};
+		class Item23
+		{
+			position[]={10610.144,15.52686,12259.963};
+			name="marker_22";
+			markerType="ELLIPSE";
+			type="mil_objective";
+			colorName="ColorRed";
+			a=190;
+			b=190;
+		};
+		class Item24
+		{
+			position[]={27030.158,20.951571,23241.047};
+			name="marker_23";
+			markerType="ELLIPSE";
+			type="mil_objective";
+			colorName="ColorRed";
+			a=190;
+			b=190;
+		};
+	};
+};
+class Intro
+{
+	addOns[]=
+	{
+		"a3_map_altis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_altis"
+	};
+	randomSeed=8428644;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=14;
+		minute=15;
+		startFogDecay=0.0049333;
+		forecastFogDecay=0.0049333;
+	};
+};
+class OutroWin
+{
+	addOns[]=
+	{
+		"a3_map_altis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_altis"
+	};
+	randomSeed=4674277;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=14;
+		minute=15;
+		startFogDecay=0.0049333;
+		forecastFogDecay=0.0049333;
+	};
+};
+class OutroLoose
+{
+	addOns[]=
+	{
+		"a3_map_altis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_altis"
+	};
+	randomSeed=6586695;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=14;
+		minute=15;
+		startFogDecay=0.0049333;
+		forecastFogDecay=0.0049333;
+	};
+};
