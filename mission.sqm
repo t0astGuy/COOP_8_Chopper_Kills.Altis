@@ -22,11 +22,13 @@ class Mission
 		"A3_Armor_F_T100K",
 		"a3_map_altis",
 		"A3_Air_F_Heli_Light_01",
-		"a3_air_f_epb_heli_light_03"
+		"a3_air_f_epb_heli_light_03",
+		"A3_Modules_F_Multiplayer"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Characters_F_BLUFOR",
+		"A3_Modules_F_Multiplayer",
 		"A3_Air_F_Beta_Heli_Attack_01",
 		"A3_Air_F_Heli_Light_01",
 		"A3_Air_F_Beta_Heli_Transport_01",
@@ -57,7 +59,7 @@ class Mission
 	};
 	class Groups
 	{
-		items=5;
+		items=6;
 		class Item0
 		{
 			side="WEST";
@@ -220,6 +222,84 @@ class Mission
 				};
 			};
 		};
+		class Item5
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={14691.117,17.91,16632.09};
+					class args
+					{
+						items=9;
+						class Item0
+						{
+							value="";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="Delay";
+						};
+						class Item1
+						{
+							value="";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="DesertedDistance";
+						};
+						class Item2
+						{
+							value="";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="RespawnCount";
+						};
+						class Item3
+						{
+							value="";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="Init";
+						};
+						class Item4
+						{
+							value="0";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="Position";
+						};
+						class Item5
+						{
+							value="0";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="PositionType";
+						};
+						class Item6
+						{
+							value="1";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="Wreck";
+						};
+						class Item7
+						{
+							value="1";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="ShowNotification";
+						};
+						class Item8
+						{
+							value="1";
+							parentCls="ModuleRespawnVehicle_F";
+							typeName="ForcedRespawn";
+						};
+					};
+					id=9;
+					side="LOGIC";
+					vehicle="ModuleRespawnVehicle_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+					syncId=0;
+					synchronizations[]={1,2,5,3,4,6};
+				};
+			};
+		};
 	};
 	class Vehicles
 	{
@@ -227,63 +307,75 @@ class Mission
 		class Item0
 		{
 			position[]={14660.711,17.91,16665.523};
-			id=9;
-			side="EMPTY";
-			vehicle="B_Heli_Attack_01_F";
-			leader=1;
-			skill=0.60000002;
-			text="VehNATO_AH1";
-		};
-		class Item1
-		{
-			position[]={14676.875,17.91,16664.525};
 			id=10;
 			side="EMPTY";
 			vehicle="B_Heli_Attack_01_F";
 			leader=1;
 			skill=0.60000002;
+			text="VehNATO_AH1";
+			syncId=1;
+			synchronizations[]={0};
+		};
+		class Item1
+		{
+			position[]={14676.875,17.91,16664.525};
+			id=11;
+			side="EMPTY";
+			vehicle="B_Heli_Attack_01_F";
+			leader=1;
+			skill=0.60000002;
 			text="VehNATO_AH2";
+			syncId=2;
+			synchronizations[]={0};
 		};
 		class Item2
 		{
 			position[]={14699.463,17.91,16683.691};
 			azimut=270;
-			id=11;
+			id=12;
 			side="EMPTY";
 			vehicle="B_Heli_Light_01_armed_F";
 			skill=0.60000002;
+			syncId=3;
+			synchronizations[]={0};
 		};
 		class Item3
 		{
 			position[]={14699.29,17.91,16695.219};
 			azimut=265;
-			id=12;
+			id=13;
 			side="EMPTY";
 			vehicle="B_Heli_Light_01_armed_F";
 			skill=0.60000002;
+			syncId=4;
+			synchronizations[]={0};
 		};
 		class Item4
 		{
 			position[]={14703.74,17.91,16666.902};
 			azimut=270;
-			id=13;
+			id=14;
 			side="EMPTY";
 			vehicle="B_Heli_Transport_01_F";
 			skill=0.60000002;
+			syncId=5;
+			synchronizations[]={0};
 		};
 		class Item5
 		{
 			position[]={14700.022,17.91,16708.512};
 			azimut=270;
-			id=14;
+			id=15;
 			side="EMPTY";
 			vehicle="I_Heli_light_03_F";
 			skill=0.60000002;
+			syncId=6;
+			synchronizations[]={0};
 		};
 	};
 	class Markers
 	{
-		items=25;
+		items=26;
 		class Item0
 		{
 			position[]={20788.02,36.14579,6751.3262};
@@ -530,6 +622,12 @@ class Mission
 			colorName="ColorRed";
 			a=190;
 			b=190;
+		};
+		class Item25
+		{
+			position[]={14672.227,17.91,16689.688};
+			name="respawn_west";
+			type="Empty";
 		};
 	};
 };

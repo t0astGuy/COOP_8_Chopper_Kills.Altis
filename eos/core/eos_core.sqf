@@ -30,7 +30,7 @@ _trig=format ["EOSTrigger%1",_mkr];
 if (!_cache) then {
 	if ismultiplayer then {
 			if (_heightLimit) then 
-			{_actCond="{vehicle _x in thisList && isplayer _x && ((getPosATL _x) select 2) < 5} count playableunits > 0";
+			{_actCond="{vehicle _x in thisList && isplayer _x && ((getPosATL _x) select 2) < 100} count playableunits > 0";
 							}else 
 							{_actCond="{vehicle _x in thisList && isplayer _x} count playableunits > 0";
 		};}else{

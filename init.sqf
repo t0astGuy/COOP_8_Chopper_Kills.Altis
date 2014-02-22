@@ -1,3 +1,8 @@
+
+
+
+
+
 // ====================================================================================
 
 // F3 - Disable Saving and Auto Saving
@@ -121,7 +126,7 @@ f_viewDistance_fixedWing = 5000;
 // [[GroupName],100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
 
 // BLUFOR > NATO
-[BLUFOR,100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
+//[BLUFOR,100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
 
 // OPFOR > CSAT
 // [OPFOR,100,1] execVM "f\server\f_endOnCasualtiesCap.sqf";
@@ -197,6 +202,11 @@ f_isFriendly = [west,civilian];
 
 // ====================================================================================
 
+
 // EOS Infantry Spawning
 
 []execVM "eos\eos.sqf";
+
+//Call our helo script
+[]execVM "helo_objs.sqf";
+

@@ -3,12 +3,36 @@
 
 
 
-
+if(isServer) then {
+hint "server code";
 //Zone Selection and Setup
-_zoneCount = 21; //number of zones on the map that we can use
+_zoneCount = 23; //number of zones on the map that we can use
 _num=floor(random _zoneCount); //fix random to give us a whole int
 _activeZone = "marker_" + str _num; //select the actual zone
 
+//debug mode sets everything easy and shows what zone is active in order to test end of mission scripts.
+if (f_var_debugMode == 1) then
+{
+	_num = 20;
+	_activeZone = "marker_20";
+	_numSquads = 1;
+	_squadSize = 1;
+	_numGunships = 0;
+	_numStaticWeapons = 0;
+	hint("DEBUG ON: Active zone is " + _activeZone);
+};
+
+
+
+
+
+
+
+//hide the markers on the client
+hint "calling marker";
+_res =[[[_num,_zoneCount],"hideMarkers.sqf"],"BIS_fnc_execVM",BLUFOR,true] spawn BIS_fnc_MP;
+
+waitUntil {scriptDone _res};
 
 
 //Difficulty Settings
@@ -53,43 +77,46 @@ if (_num==10) then {
 	_numGunships = 0;
 };
 
-//debug mode sets everything easy and shows what zone is active in order to test end of mission scripts.
-if (f_var_debugMode == 1) then
-{
-	_num = 20;
-	_activeZone = "marker_20";
-	_numSquads = 1;
-	_squadSize = 1;
-	_numGunships = 0;
-	_numStaticWeapons = 0;
-	hint("DEBUG ON: Active zone is " + _activeZone);
-};
+
 
 //Call the EOS Scipt to create the zone.
-null = [[_activeZone],[0,0],[_numSquads,_squadSize],[0,0],[0,_numStaticWeapons,_numGunships,0],[0,0,3000,EAST]] call EOS_Spawn;
+null = [[_activeZone],[0,0],[_numSquads,_squadSize],[0,0],[0,_numStaticWeapons,_numGunships,0],[0,2,3000,EAST]] call EOS_Spawn;
 
 
-
-
-//Hide all the zones that we don't activate.
-for [{_i=0},{_i <= _zoneCount},{_i = _i + 1}] do {
-	if (_i != _num) then {
-		_toDelete = "marker_" + str _i;
-		
-		//probably don't want to delete the zone as that my jack up the next script call instead set the alpha to 0
-		_toDelete setMarkerAlpha 0;
-		//null = deleteMarkerLocal _toDelete;
-	};
-};
 
 
 //if every zone is green then the mission is complete and end it
-while{true} do {
-	if (getMarkerColor _activeZone == "colorGreen") then {
+ while{true} do 
+{
+	 if (getMarkerColor _activeZone == "colorGreen") then 
+	 {
 		endMission "end2";
 	};
-	sleep 1;
+sleep 5;
 };
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //hide markers
 //need extraction point
